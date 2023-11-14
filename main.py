@@ -108,7 +108,7 @@ def filter_by_genre():
             .mark_bar(opacity=0.3)
             .encode(x="genre", y=alt.Y("count:Q", stack=None), color="genre:N")
         ).properties(
-            title="Chart of Movies done the following countries " + ", ".join(genre),
+            title="Chart of Movies by genre " + ", ".join(genre),
             height=600,
         )
         st.altair_chart(chart, use_container_width=True)
